@@ -33,6 +33,9 @@ class AppView extends StatelessWidget {
         systemNavigationBarColor: Color(0xFFE9E9E9),
         systemNavigationBarIconBrightness: Brightness.dark));
 
-    return const MaterialApp(debugShowCheckedModeBanner: false, home: Home());
+    return const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Freemake - Best Freeware Alternative To Paid Media Software',
+        home: Home());
   }
 }
