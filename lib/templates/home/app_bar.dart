@@ -13,7 +13,7 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
           children: [
             Image.asset(
               Assets.logo,
-              width: 25,
+              width: 30,
             ),
             const SizedBox(
               width: 10,
@@ -22,13 +22,14 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
           ],
         ),
         SizedBox(
-          width: MediaQuery.of(context).size.width * 0.2,
+          width: MediaQuery.of(context).size.width * 0.21,
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('About Us'),
-              Text('Privacy policy'),
-              Text('Terms of Use')
+              Text('About Us', style: TextStyle(fontFamily: 'Montserrat')),
+              Text('Privacy policy',
+                  style: TextStyle(fontFamily: 'Montserrat')),
+              Text('Terms of Use', style: TextStyle(fontFamily: 'Montserrat'))
             ],
           ),
         )
@@ -40,8 +41,9 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
         text: const TextSpan(
           text: 'Free',
           style: TextStyle(
+              fontFamily: 'Montserrat',
               fontWeight: FontWeight.bold,
-              color: Color(0xFFFFC12F),
+              color: Color(0xFFF2A115),
               fontSize: 22.0),
           children: <TextSpan>[
             TextSpan(
