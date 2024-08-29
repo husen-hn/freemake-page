@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:freemake_page/templates/home/app_bar.dart' as ab;
 import 'package:freemake_page/templates/home/header.dart';
+import 'package:freemake_page/templates/home/who_is.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: ab.AppBar(),
-      body: Column(
-        children: [Header()],
-      ),
-    );
+    return Scaffold(
+        body: ListView(
+      children: const [ab.AppBar(), Header(), WhoIs()],
+    ));
   }
 }
