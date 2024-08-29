@@ -16,7 +16,9 @@ class App extends StatelessWidget {
           RepositoryProvider.value(value: homeRepository),
         ],
         child: MultiBlocProvider(providers: [
-          BlocProvider<AppCubit>(create: (BuildContext abContext) => AppCubit())
+          BlocProvider<AppCubit>(
+              create: (BuildContext abContext) =>
+                  AppCubit(repository: abContext.read<HomeRepository>()))
         ], child: const AppView()));
   }
 }
