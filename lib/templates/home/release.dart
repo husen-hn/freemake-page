@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freemake_page/assets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Release extends StatelessWidget {
   const Release({super.key});
@@ -33,7 +34,10 @@ class Release extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             TextButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  _launchUrl(
+                      'https://github.com/husen-hn/freemake_page/releases');
+                },
                 label: Text('Releases',
                     style: TextStyle(
                         fontFamily: 'Montserrat',
@@ -73,4 +77,10 @@ class Release extends StatelessWidget {
           ],
         ),
       );
+
+  Future<void> _launchUrl(url) async {
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
+  }
 }
