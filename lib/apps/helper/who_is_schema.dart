@@ -1,8 +1,8 @@
 class WhoIsSchema {
-  String icon;
-  String title;
-  String description;
+  final String icon;
+  final String title;
+  final String description;
 
-  WhoIsSchema(
+  const WhoIsSchema(
       {required this.icon, required this.title, required this.description});
 }

@@ -14,19 +14,20 @@ class WhoIs extends StatelessWidget {
       color: Colors.grey[200],
       child: Column(
         children: [
-          const SelectableText(
+          SelectableText(
             'Who is Freemake For?',
             style: TextStyle(
                 fontFamily: 'Montserrat',
                 fontWeight: FontWeight.bold,
-                fontSize: 20),
+                fontSize: 22,
+                color: Colors.grey[900]),
           ),
           const SizedBox(height: 40),
           SizedBox(
             height: 350,
             child: ListView.separated(
                 separatorBuilder: (BuildContext context, int index) {
-                  return const SizedBox(width: 30);
+                  return const SizedBox(width: 60);
                 },
                 scrollDirection: Axis.horizontal,
                 shrinkWrap: true,

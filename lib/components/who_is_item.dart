@@ -14,27 +14,31 @@ class WhoIsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.2,
+      width: MediaQuery.of(context).size.width * 0.16,
       child: Column(
         children: [
           Image.asset(
             icon,
             width: 100,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 30),
           SelectableText(
             title,
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style: TextStyle(
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.bold,
-                fontSize: 14),
+                fontSize: 16,
+                color: Colors.grey[900]),
           ),
           const SizedBox(height: 10),
           SelectableText(
             description,
-            textAlign: TextAlign.justify,
-            style: const TextStyle(fontFamily: 'Montserrat', fontSize: 14),
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontFamily: 'Montserrat',
+                fontSize: 14,
+                color: Colors.grey[800]),
           )
         ],
       ),
