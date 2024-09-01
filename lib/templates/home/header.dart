@@ -19,25 +19,30 @@ class Header extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SelectableText(
+                SelectableText(
                   'Freemake Video/Audio Converter\nHigh-Quality Freeware for All Your Media Needs',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 32,
-                      fontFamily: 'Montserrat'),
+                      fontFamily: 'Montserrat',
+                      color: Colors.grey[900]),
                 ),
                 const SizedBox(height: 40),
-                const SelectableText(
+                SelectableText(
                   "Convert Videos/Audios to Multiple Formats with Freemake’s Reliable and Free Software, Supporting All Popular and Rare Formats for Various Devices.",
-                  style: TextStyle(fontSize: 16, fontFamily: 'Montserrat'),
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: 'Montserrat',
+                      color: Colors.grey[800]),
                 ),
                 const SizedBox(height: 110),
-                const SelectableText(
+                SelectableText(
                   'Download the app:',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 14,
-                      fontFamily: 'Montserrat'),
+                      fontFamily: 'Montserrat',
+                      color: Colors.grey[900]),
                 ),
                 const SizedBox(height: 10),
                 Row(
