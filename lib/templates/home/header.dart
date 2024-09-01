@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freemake_page/assets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -47,14 +48,26 @@ class Header extends StatelessWidget {
                 const SizedBox(height: 10),
                 Row(
                   children: [
-                    Image.asset(
-                      Assets.directDL,
-                      width: 160,
+                    InkWell(
+                      onTap: () {
+                        _launchUrl(
+                            'https://github.com/husen-hn/Freemake-page/releases/latest');
+                      },
+                      child: Image.asset(
+                        Assets.directDL,
+                        width: 160,
+                      ),
                     ),
                     const SizedBox(width: 10),
-                    Image.asset(
-                      Assets.cafebazaarDL,
-                      width: 160,
+                    InkWell(
+                      onTap: () {
+                        _launchUrl(
+                            'https://cafebazaar.ir/app/com.husen.freemake');
+                      },
+                      child: Image.asset(
+                        Assets.cafebazaarDL,
+                        width: 160,
+                      ),
                     )
                   ],
                 )
@@ -69,5 +82,11 @@ class Header extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _launchUrl(url) async {
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
   }
 }

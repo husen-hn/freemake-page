@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freemake_page/assets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});
@@ -16,7 +17,10 @@ class Footer extends StatelessWidget {
             children: [
               Row(children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl(
+                        'https://github.com/husen-hn/Freemake-page/releases/latest');
+                  },
                   child: Image.asset(
                     Assets.directDL,
                     width: 120,
@@ -24,7 +28,9 @@ class Footer extends StatelessWidget {
                 ),
                 const SizedBox(width: 10),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl('https://cafebazaar.ir/app/com.husen.freemake');
+                  },
                   child: Image.asset(
                     Assets.cafebazaarDL,
                     width: 120,
@@ -71,5 +77,11 @@ class Footer extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _launchUrl(url) async {
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
   }
 }

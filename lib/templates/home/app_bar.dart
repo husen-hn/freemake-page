@@ -9,32 +9,48 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 18, right: 18, top: 18, bottom: 10),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        Row(
-          children: [
-            Image.asset(
-              Assets.logo,
-              width: 30,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            _appBarTitle
-          ],
+        InkWell(
+          onTap: () {},
+          hoverColor: Colors.transparent,
+          child: Row(
+            children: [
+              Image.asset(
+                Assets.logo,
+                width: 30,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              _appBarTitle
+            ],
+          ),
         ),
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.21,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('About Us',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat', color: Colors.grey[800])),
-              Text('Privacy policy',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat', color: Colors.grey[800])),
-              Text('Terms of Use',
-                  style: TextStyle(
-                      fontFamily: 'Montserrat', color: Colors.grey[800]))
+              InkWell(
+                hoverColor: Colors.transparent,
+                onTap: () {},
+                child: Text('About Us',
+                    style: TextStyle(
+                        fontFamily: 'Montserrat', color: Colors.grey[800])),
+              ),
+              InkWell(
+                hoverColor: Colors.transparent,
+                onTap: () {},
+                child: Text('Privacy policy',
+                    style: TextStyle(
+                        fontFamily: 'Montserrat', color: Colors.grey[800])),
+              ),
+              InkWell(
+                hoverColor: Colors.transparent,
+                onTap: () {},
+                child: Text('Terms of Use',
+                    style: TextStyle(
+                        fontFamily: 'Montserrat', color: Colors.grey[800])),
+              )
             ],
           ),
         )
