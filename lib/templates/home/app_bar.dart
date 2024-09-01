@@ -32,21 +32,27 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
             children: [
               InkWell(
                 hoverColor: Colors.transparent,
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushNamed('/about-us');
+                },
                 child: Text('About Us',
                     style: TextStyle(
                         fontFamily: 'Montserrat', color: Colors.grey[800])),
               ),
               InkWell(
                 hoverColor: Colors.transparent,
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushNamed('/privacy-policy');
+                },
                 child: Text('Privacy policy',
                     style: TextStyle(
                         fontFamily: 'Montserrat', color: Colors.grey[800])),
               ),
               InkWell(
                 hoverColor: Colors.transparent,
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushNamed('/tems-of-use');
+                },
                 child: Text('Terms of Use',
                     style: TextStyle(
                         fontFamily: 'Montserrat', color: Colors.grey[800])),
