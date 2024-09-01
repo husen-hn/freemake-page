@@ -10,7 +10,9 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
       padding: const EdgeInsets.only(left: 18, right: 18, top: 18, bottom: 10),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).pushNamed('/');
+          },
           hoverColor: Colors.transparent,
           child: Row(
             children: [
@@ -35,6 +37,8 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
                 onTap: () {
                   Navigator.of(context).pushNamed('/about-us');
                 },
+                highlightColor: Colors.transparent,
+                splashColor: Colors.transparent,
                 child: Text('About Us',
                     style: TextStyle(
                         fontFamily: 'Montserrat', color: Colors.grey[800])),

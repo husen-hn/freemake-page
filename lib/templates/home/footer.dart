@@ -18,8 +18,8 @@ class Footer extends StatelessWidget {
               Row(children: [
                 InkWell(
                   onTap: () {
-                    _launchUrl(
-                        'https://github.com/husen-hn/Freemake-page/releases/latest');
+                    _launchUrl(Uri.parse(
+                        'https://github.com/husen-hn/Freemake-page/releases/latest'));
                   },
                   child: Image.asset(
                     Assets.directDL,
@@ -29,7 +29,8 @@ class Footer extends StatelessWidget {
                 const SizedBox(width: 10),
                 InkWell(
                   onTap: () {
-                    _launchUrl('https://cafebazaar.ir/app/com.husen.freemake');
+                    _launchUrl(Uri.parse(
+                        'https://cafebazaar.ir/app/com.husen.freemake'));
                   },
                   child: Image.asset(
                     Assets.cafebazaarDL,
@@ -44,21 +45,27 @@ class Footer extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/about-us');
+                      },
                       child: Text('About Us',
                           style: TextStyle(
                               fontFamily: 'Montserrat',
                               color: Colors.grey[900])),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/privacy-policy');
+                      },
                       child: Text('Privacy policy',
                           style: TextStyle(
                               fontFamily: 'Montserrat',
                               color: Colors.grey[900])),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/tems-of-use');
+                      },
                       child: Text('Terms of Use',
                           style: TextStyle(
                               fontFamily: 'Montserrat',

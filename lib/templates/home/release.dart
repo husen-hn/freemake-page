@@ -35,8 +35,8 @@ class Release extends StatelessWidget {
             const SizedBox(height: 30),
             TextButton.icon(
                 onPressed: () {
-                  _launchUrl(
-                      'https://github.com/husen-hn/freemake_page/releases');
+                  _launchUrl(Uri.parse(
+                      'https://github.com/husen-hn/freemake_page/releases'));
                 },
                 label: Text('Releases',
                     style: TextStyle(
