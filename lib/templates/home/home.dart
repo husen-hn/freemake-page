@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freemake_page/templates/home/app_bar.dart' as ab;
+import 'package:freemake_page/templates/home/footer.dart';
 import 'package:freemake_page/templates/home/header.dart';
 import 'package:freemake_page/templates/home/how_work.dart';
 import 'package:freemake_page/templates/home/release.dart';
@@ -12,7 +13,14 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: ListView(
-      children: const [ab.AppBar(), Header(), WhoIs(), Release(), HowWork()],
+      children: const [
+        ab.AppBar(),
+        Header(),
+        WhoIs(),
+        Release(),
+        HowWork(),
+        Footer()
+      ],
     ));
   }
 }
