@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:freemake_page/apps/helper/how_work_schema.dart';
 import 'package:freemake_page/apps/helper/who_is_schema.dart';
 import 'package:freemake_page/apps/home/home_repository.dart';
 
@@ -12,4 +13,5 @@ class AppCubit extends Cubit<AppState> {
   final HomeRepository _repository;
 
   List<WhoIsSchema> get getWhoIsData => _repository.whoIsData;
+  List<HowWorkSchema> get getHowWorkData => _repository.howWorkData;
 }

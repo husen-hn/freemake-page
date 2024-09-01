@@ -7,4 +7,7 @@ class Assets {
   static String techEnthusiasts = 'assets/images/tech_enthusiasts.png';
   static String contentCreator = 'assets/images/content_creator.png';
   static String professional = 'assets/images/professional.png';
+  static String chooseMedia = 'assets/images/choose_media.jpg';
+  static String chooseFormat = 'assets/images/choose_format.jpg';
+  static String convertMedia = 'assets/images/convert_media.jpg';
 }

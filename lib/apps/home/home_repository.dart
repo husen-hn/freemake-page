@@ -1,3 +1,4 @@
+import 'package:freemake_page/apps/helper/how_work_schema.dart';
 import 'package:freemake_page/apps/helper/who_is_schema.dart';
 import 'package:freemake_page/assets.dart';
 
@@ -6,26 +7,44 @@ abstract class IHomeRepository {}
 class HomeRepository {
   HomeRepository();
 
+  List<HowWorkSchema> howWorkData = [
+    HowWorkSchema(
+        icon: Assets.chooseMedia,
+        title: 'Add your files',
+        description:
+            'To begin, simply click the "Add Video" or "Add Audio" button to select the files you wish to convert.'),
+    HowWorkSchema(
+        icon: Assets.chooseFormat,
+        title: 'Choose an output format',
+        description:
+            'Select the format you want to convert your files to from the list of available options. Freemake supports a wide variety of formats, including MP4, AVI, WMV, MP3, and more.'),
+    HowWorkSchema(
+        icon: Assets.convertMedia,
+        title: 'Convert your files',
+        description:
+            'Click the "Convert" button to start converting your files. The conversion time will vary depending on the size and format of your files.')
+  ];
+
   List<WhoIsSchema> whoIsData = [
     WhoIsSchema(
         icon: Assets.casualUser,
-        title: 'Freemake for Casual Users',
+        title: 'Casual Users',
         description:
-            'Freemake is ideal for casual users who need a straightforward, free solution to convert videos for social media, personal projects, or sharing with friends and family. With its user-friendly interface and no hidden costs, Freemake makes video conversion a breeze.'),
+            'Ideal for those who need a simple, free solution for converting videos/audios for social media or personal projects.'),
     WhoIsSchema(
         icon: Assets.techEnthusiasts,
-        title: 'Freemake for Tech Enthusiasts',
+        title: 'Tech Enthusiasts',
         description:
-            "Tech enthusiasts will appreciate Freemake's extensive format support and advanced features. Whether you're managing a vast media library or experimenting with different video formats, Freemake provides the flexibility and reliability you need."),
+            'Appreciated for its extensive format support and advanced features, perfect for managing large media files.'),
     WhoIsSchema(
         icon: Assets.contentCreator,
-        title: 'Freemake for Content Creators',
+        title: 'Content Creators',
         description:
-            "Content creators can rely on Freemake to convert videos into various formats suitable for different platforms. Whether you're producing content for YouTube, Instagram, or other social media, Freemake ensures your videos are compatible and high-quality."),
+            'Reliable for converting videos/audios into formats compatible with various popular social media platforms.'),
     WhoIsSchema(
         icon: Assets.professional,
-        title: 'Freemake for Professionals',
+        title: 'For Professionals',
         description:
-            'Professionals in need of a reliable video conversion tool will find Freemake invaluable. Its support for a wide range of formats and devices, along with its high-quality output, makes it a perfect choice for professional use without the cost.')
+            'Valuable for its wide format support and high-quality output, making it an excellent, cost-free choice for professional use.')
   ];
 }

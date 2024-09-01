@@ -23,13 +23,18 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.21,
-          child: const Row(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('About Us', style: TextStyle(fontFamily: 'Montserrat')),
+              Text('About Us',
+                  style: TextStyle(
+                      fontFamily: 'Montserrat', color: Colors.grey[800])),
               Text('Privacy policy',
-                  style: TextStyle(fontFamily: 'Montserrat')),
-              Text('Terms of Use', style: TextStyle(fontFamily: 'Montserrat'))
+                  style: TextStyle(
+                      fontFamily: 'Montserrat', color: Colors.grey[800])),
+              Text('Terms of Use',
+                  style: TextStyle(
+                      fontFamily: 'Montserrat', color: Colors.grey[800]))
             ],
           ),
         )
@@ -38,9 +43,9 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   RichText get _appBarTitle => RichText(
-        text: const TextSpan(
+        text: TextSpan(
           text: 'Free',
-          style: TextStyle(
+          style: const TextStyle(
               fontFamily: 'Montserrat',
               fontWeight: FontWeight.bold,
               color: Color(0xFFF2A115),
@@ -49,7 +54,7 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
             TextSpan(
                 text: 'make',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.black)),
+                    fontWeight: FontWeight.bold, color: Colors.grey[900])),
           ],
         ),
       );
