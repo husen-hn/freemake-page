@@ -14,6 +14,8 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
             Navigator.of(context).pushNamed('/');
           },
           hoverColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          splashColor: Colors.transparent,
           child: Row(
             children: [
               Image.asset(
@@ -48,6 +50,8 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
                 onTap: () {
                   Navigator.of(context).pushNamed('/privacy-policy');
                 },
+                highlightColor: Colors.transparent,
+                splashColor: Colors.transparent,
                 child: Text('Privacy policy',
                     style: TextStyle(
                         fontFamily: 'Montserrat', color: Colors.grey[800])),
@@ -57,6 +61,8 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
                 onTap: () {
                   Navigator.of(context).pushNamed('/tems-of-use');
                 },
+                highlightColor: Colors.transparent,
+                splashColor: Colors.transparent,
                 child: Text('Terms of Use',
                     style: TextStyle(
                         fontFamily: 'Montserrat', color: Colors.grey[800])),
