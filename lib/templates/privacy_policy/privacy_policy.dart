@@ -37,7 +37,7 @@ class PrivacyPolicy extends StatelessWidget {
                               fontSize: 16, fontWeight: FontWeight.bold)),
                       const TextSpan(
                           text:
-                              'Freemake respects your online privacy and is committed to protecting any personal information ("Personal Information") you share with us. This Privacy Policy explains how we collect, use, and disclose your Personal Information when you use our website, '),
+                              'Freemake respects your online privacy and is committed to protecting any personal information ("Personal Information") you share with us. This Privacy Policy explains how we collect, use, and disclose your Personal Information when you use our application, '),
                       TextSpan(
                         text: 'https://husen-hn.github.io/freemake-page.\n\n',
                         style: const TextStyle(color: Colors.blue),
@@ -51,7 +51,7 @@ class PrivacyPolicy extends StatelessWidget {
                           text: 'What Personal Information Do We Collect?\n\n'),
                       const TextSpan(
                           text:
-                              'Freemake does not collect any personal information when you use our website.\n\n'),
+                              'Freemake does not collect any personal information when you use our application.\n\n'),
                       const TextSpan(
                           text: 'How We Use Your Information\n\n',
                           style: TextStyle(
@@ -78,14 +78,14 @@ class PrivacyPolicy extends StatelessWidget {
                               fontSize: 16, fontWeight: FontWeight.bold)),
                       const TextSpan(
                           text:
-                              'Our website may contain links to other websites. Freemake is not responsible for the privacy practices of those websites. We encourage you to read the privacy statements of each website you visit.\n\n'),
+                              'Our application may contain links to other websites. Freemake is not responsible for the privacy practices of those websites. We encourage you to read the privacy statements of each website you visit.\n\n'),
                       const TextSpan(
                           text: 'Third-Party Advertising\n\n',
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold)),
                       const TextSpan(
                           text:
-                              'We may use third-party advertising companies to display ads on our website. These companies may use non-personal information (not including your name, address, email, or phone number) about your visits to this and other websites to deliver targeted advertising. For more information on this practice and how to opt out, visit: '),
+                              'We may use third-party advertising companies to display ads on our application. These companies may use non-personal information (not including your name, address, email, or phone number) about your visits to this and other websites to deliver targeted advertising. For more information on this practice and how to opt out, visit: '),
                       TextSpan(
                         text: 'https://www.adivery.com.\n\n',
                         style: const TextStyle(color: Colors.blue),
@@ -100,7 +100,7 @@ class PrivacyPolicy extends StatelessWidget {
                               fontSize: 16, fontWeight: FontWeight.bold)),
                       const TextSpan(
                           text:
-                              'Our website is not intended for children. We do not knowingly collect Personal Information from anyone under 13 years old.\n\n'),
+                              'Our application is not intended for children. We do not knowingly collect Personal Information from anyone under 13 years old.\n\n'),
                       const TextSpan(
                           text: 'Changes to This Policy\n\n',
                           style: TextStyle(
