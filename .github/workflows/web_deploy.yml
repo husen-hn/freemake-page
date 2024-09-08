@@ -21,7 +21,6 @@ jobs:
       - run: flutter build web --release
 
       - run: |
-          ls
           cd build
           mkdir web-deploy
           cd web-deploy
