@@ -21,6 +21,7 @@ jobs:
       - run: flutter build web --release
 
       - run: |
+          ls
           cd build
           mkdir web-deploy
           cd web-deploy
@@ -45,4 +46,3 @@ jobs:
           echo ""
           git commit -m "${{ github.event.head_commit.message }}"
           git push origin gh-pages
-          

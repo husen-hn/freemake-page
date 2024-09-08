@@ -7,13 +7,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:freemake_page/apps/home/home_repository.dart';
 
-import 'package:freemake_page/main.dart';
+import 'package:freemake_page/templates/app/app.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    final HomeRepository homeRepository = HomeRepository();
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(App(homeRepository: homeRepository));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
