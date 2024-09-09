@@ -1,47 +1,30 @@
-name: Deploy to GitHub Pages
-
+name: Flutter Web
 on:
   push:
-    branches: [ master ]
-
+    branches:
+      - master
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: Build Web
     env:
       my_secret: ${{secrets.ACCESS_TOKEN}}
-
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
+      - uses: actions/checkout@v1
+      - uses: subosito/flutter-action@v1
         with:
-          channel: 'stable'
-
-      - run: flutter clean
+          channel: 'dev'
+      - run: flutter config --enable-web
       - run: flutter pub get
       - run: flutter build web --release
-
       - run: |
-          cd build
-          mkdir web-deploy
-          cd web-deploy
-          #! Update with your Email ID associated with GitHub
-          git config --global user.email hosseinspell@gmail.com
-          #! Update with your username associated with GitHub
-          git config --global user.name husen-hn
-          git config --global init.defaultBranch main
+          cd build/web
           git init
-          # the repository to push the deploy into
-          #! Update the following with your username and repository
-          git remote add origin https://${{secrets.ACCESS_TOKEN}}@github.com/husen-hn/freemake-page.git
-          git fetch origin gh-pages
-          git switch gh-pages
-          # copy the build that is there in ROOT/build/web into ROOT/build/web-deploy
-          cp -R ../web/* .
+          git config --global user.email hosseinspell@gmail.com 
+          git config --global user.name husen-hn 
           git status
-          git add .
-          # add commit of the previous commit from main
-          echo ""
-          echo "Committing to gh-pages: ${{ github.event.head_commit.message }}"
-          echo ""
-          git commit -m "${{ github.event.head_commit.message }}"
-          git push origin gh-pages
+          git remote add origin https://${{secrets.ACCESS_TOKEN}}@github.com/husen-hn/freemake-page.git
+          git checkout -b gh-pages
+          git add --all
+          git commit -m "update"
+          git push origin gh-pages -f
