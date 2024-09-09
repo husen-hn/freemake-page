@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:freemake_page/assets.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class NavDrawer extends StatelessWidget {
   const NavDrawer({Key? key}) : super(key: key);

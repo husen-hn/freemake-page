@@ -7,9 +7,13 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isLScreen = MediaQuery.of(context).size.width > 600;
     return Container(
-      padding: const EdgeInsets.only(left: 64, right: 64),
-      height: MediaQuery.of(context).size.height,
+      padding: EdgeInsets.only(
+          left: isLScreen ? 64 : 32, right: isLScreen ? 64 : 32),
+      height: isLScreen
+          ? MediaQuery.of(context).size.height
+          : MediaQuery.of(context).size.height * 0.7,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,58 +28,85 @@ class Header extends StatelessWidget {
                   'Freemake Video/Audio Converter\nHigh-Quality Freeware for All Your Media Needs',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 32,
+                      fontSize: isLScreen ? 32 : 16,
                       fontFamily: 'Montserrat',
                       color: Colors.grey[900]),
                 ),
-                const SizedBox(height: 40),
+                SizedBox(height: isLScreen ? 40 : 20),
                 SelectableText(
                   "Convert Videos/Audios to Multiple Formats with Freemake’s Reliable and Free Software, Supporting All Popular and Rare Formats for Various Devices.",
                   style: TextStyle(
-                      fontSize: 16,
+                      fontSize: isLScreen ? 16 : 12,
                       fontFamily: 'Montserrat',
                       color: Colors.grey[800]),
                 ),
-                const SizedBox(height: 110),
+                SizedBox(height: isLScreen ? 110 : 40),
                 SelectableText(
                   'Download the app:',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 14,
+                      fontSize: isLScreen ? 14 : 10,
                       fontFamily: 'Montserrat',
                       color: Colors.grey[900]),
                 ),
                 const SizedBox(height: 10),
-                Row(
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        _launchUrl(Uri.parse(
-                            'https://github.com/husen-hn/Freemake-page/releases/latest'));
-                      },
-                      child: Image.asset(
-                        Assets.directDL,
-                        width: 160,
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    InkWell(
-                      onTap: () {
-                        _launchUrl(Uri.parse(
-                            'https://cafebazaar.ir/app/com.husen.freemake'));
-                      },
-                      child: Image.asset(
-                        Assets.cafebazaarDL,
-                        width: 160,
-                      ),
-                    )
-                  ],
-                )
+                isLScreen
+                    ? Row(
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              _launchUrl(Uri.parse(
+                                  'https://github.com/husen-hn/Freemake-page/releases/latest'));
+                            },
+                            child: Image.asset(
+                              Assets.directDL,
+                              width: 160,
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          InkWell(
+                            onTap: () {
+                              _launchUrl(Uri.parse(
+                                  'https://cafebazaar.ir/app/com.husen.freemake'));
+                            },
+                            child: Image.asset(
+                              Assets.cafebazaarDL,
+                              width: 160,
+                            ),
+                          )
+                        ],
+                      )
+                    : Column(
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              _launchUrl(Uri.parse(
+                                  'https://github.com/husen-hn/Freemake-page/releases/latest'));
+                            },
+                            child: Image.asset(
+                              Assets.directDL,
+                              width: 130,
+                            ),
+                          ),
+                          const SizedBox(height: 5),
+                          InkWell(
+                            onTap: () {
+                              _launchUrl(Uri.parse(
+                                  'https://cafebazaar.ir/app/com.husen.freemake'));
+                            },
+                            child: Image.asset(
+                              Assets.cafebazaarDL,
+                              width: 130,
+                            ),
+                          )
+                        ],
+                      )
               ],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 100, right: 100),
+            padding: EdgeInsets.only(
+                left: isLScreen ? 100 : 10, right: isLScreen ? 100 : 10),
             child: Image.asset(Assets.convert,
                 width: MediaQuery.of(context).size.width * 0.22),
           )
