@@ -6,6 +6,7 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isLScreen = MediaQuery.of(context).size.width > 600;
     return Padding(
       padding: const EdgeInsets.only(left: 18, right: 18, top: 18, bottom: 10),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
@@ -29,47 +30,64 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
             ],
           ),
         ),
-        SizedBox(
-          width: MediaQuery.of(context).size.width * 0.21,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              InkWell(
-                hoverColor: Colors.transparent,
-                onTap: () {
-                  Navigator.of(context).pushNamed('/about-us');
-                },
-                highlightColor: Colors.transparent,
-                splashColor: Colors.transparent,
-                child: Text('About Us',
-                    style: TextStyle(
-                        fontFamily: 'Montserrat', color: Colors.grey[800])),
-              ),
-              InkWell(
-                hoverColor: Colors.transparent,
-                onTap: () {
-                  Navigator.of(context).pushNamed('/privacy-policy');
-                },
-                highlightColor: Colors.transparent,
-                splashColor: Colors.transparent,
-                child: Text('Privacy policy',
-                    style: TextStyle(
-                        fontFamily: 'Montserrat', color: Colors.grey[800])),
-              ),
-              InkWell(
-                hoverColor: Colors.transparent,
-                onTap: () {
-                  Navigator.of(context).pushNamed('/tems-of-use');
-                },
-                highlightColor: Colors.transparent,
-                splashColor: Colors.transparent,
-                child: Text('Terms of Use',
-                    style: TextStyle(
-                        fontFamily: 'Montserrat', color: Colors.grey[800])),
+        isLScreen
+            ? Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(right: 10),
+                    child: InkWell(
+                      hoverColor: Colors.transparent,
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/about-us');
+                      },
+                      highlightColor: Colors.transparent,
+                      splashColor: Colors.transparent,
+                      child: Text('About Us',
+                          style: TextStyle(
+                              fontFamily: 'Montserrat',
+                              color: Colors.grey[800])),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(right: 10),
+                    child: InkWell(
+                      hoverColor: Colors.transparent,
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/privacy-policy');
+                      },
+                      highlightColor: Colors.transparent,
+                      splashColor: Colors.transparent,
+                      child: Text('Privacy policy',
+                          style: TextStyle(
+                              fontFamily: 'Montserrat',
+                              color: Colors.grey[800])),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(right: 10),
+                    child: InkWell(
+                      hoverColor: Colors.transparent,
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/tems-of-use');
+                      },
+                      highlightColor: Colors.transparent,
+                      splashColor: Colors.transparent,
+                      child: Text('Terms of Use',
+                          style: TextStyle(
+                              fontFamily: 'Montserrat',
+                              color: Colors.grey[800])),
+                    ),
+                  )
+                ],
               )
-            ],
-          ),
-        )
+            : GestureDetector(
+                onTap: () => Scaffold.of(context).openEndDrawer(),
+                child: Image.asset(
+                  Assets.menu,
+                  color: const Color(0xFFF2A115),
+                  semanticLabel: 'right navigation menu',
+                )),
       ]),
     );
   }

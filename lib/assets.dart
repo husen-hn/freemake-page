@@ -10,4 +10,5 @@ class Assets {
   static String chooseMedia = 'assets/images/choose_media.jpg';
   static String chooseFormat = 'assets/images/choose_format.jpg';
   static String convertMedia = 'assets/images/convert_media.jpg';
+  static String menu = 'assets/images/menu.png';
 }
