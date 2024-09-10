@@ -15,6 +15,7 @@ class HowWorkItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isLScreen = MediaQuery.of(context).size.width > 600;
     return SizedBox(
         width: MediaQuery.of(context).size.width * 0.16,
         child: Row(
@@ -26,8 +27,11 @@ class HowWorkItem extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.3,
                   )
                 : Container(),
+            const SizedBox(width: 50),
             SizedBox(
-              width: MediaQuery.of(context).size.width * 0.2,
+              width: isLScreen
+                  ? MediaQuery.of(context).size.width * 0.2
+                  : MediaQuery.of(context).size.width * 0.4,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -36,19 +40,20 @@ class HowWorkItem extends StatelessWidget {
                     style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold,
-                        fontSize: 16,
+                        fontSize: isLScreen ? 16 : 14,
                         color: Colors.grey[900]),
                   ),
                   Text(
                     description,
                     style: TextStyle(
                         fontFamily: 'Montserrat',
-                        fontSize: 16,
+                        fontSize: isLScreen ? 14 : 12,
                         color: Colors.grey[900]),
                   )
                 ],
               ),
             ),
+            const SizedBox(width: 50),
             index % 2 == 0
                 ? Container()
                 : Image.asset(

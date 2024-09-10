@@ -10,7 +10,7 @@ class HowWork extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: const EdgeInsets.only(top: 32),
+      padding: const EdgeInsets.only(top: 32, bottom: 64),
       child: Column(
         children: [
           const SelectableText('How does Freemake work?',
@@ -18,6 +18,7 @@ class HowWork extends StatelessWidget {
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.bold,
                   fontSize: 20)),
+          const SizedBox(height: 40),
           ListView.separated(
               separatorBuilder: (BuildContext context, int index) {
                 return const SizedBox(height: 20);
