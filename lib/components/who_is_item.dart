@@ -13,31 +13,36 @@ class WhoIsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isLScreen = MediaQuery.of(context).size.width > 600;
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.16,
       child: Column(
         children: [
           Image.asset(
             icon,
-            width: 100,
+            width: isLScreen ? 100 : 70,
           ),
           const SizedBox(height: 30),
-          SelectableText(
+          Text(
             title,
             textAlign: TextAlign.center,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 2,
             style: TextStyle(
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.bold,
-                fontSize: 16,
+                fontSize: isLScreen ? 16 : 14,
                 color: Colors.grey[900]),
           ),
           const SizedBox(height: 10),
-          SelectableText(
+          Text(
             description,
             textAlign: TextAlign.center,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 5,
             style: TextStyle(
                 fontFamily: 'Montserrat',
-                fontSize: 14,
+                fontSize: isLScreen ? 14 : 12,
                 color: Colors.grey[800]),
           )
         ],

@@ -8,9 +8,11 @@ class WhoIs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isLScreen = MediaQuery.of(context).size.width > 600;
+
     return Container(
-      padding: const EdgeInsets.only(top: 32),
-      height: 460,
+      padding: const EdgeInsets.all(32),
+      height: isLScreen ? 500 : null,
       color: Colors.grey[200],
       child: Column(
         children: [
@@ -24,14 +26,18 @@ class WhoIs extends StatelessWidget {
           ),
           const SizedBox(height: 40),
           SizedBox(
-            height: 350,
+            height: isLScreen ? 300 : null,
             child: ListView.separated(
-                separatorBuilder: (BuildContext context, int index) {
-                  return const SizedBox(width: 60);
-                },
-                scrollDirection: Axis.horizontal,
+                physics: const NeverScrollableScrollPhysics(),
+                scrollDirection: isLScreen ? Axis.horizontal : Axis.vertical,
                 shrinkWrap: true,
                 itemCount: context.read<AppCubit>().getWhoIsData.length,
+                separatorBuilder: (BuildContext context, int index) {
+                  return const SizedBox(
+                    width: 60,
+                    height: 30,
+                  );
+                },
                 itemBuilder: (BuildContext context, int index) => WhoIsItem(
                     icon: context.read<AppCubit>().getWhoIsData[index].icon,
                     title: context.read<AppCubit>().getWhoIsData[index].title,

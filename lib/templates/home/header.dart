@@ -106,9 +106,9 @@ class Header extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(
-                left: isLScreen ? 100 : 10, right: isLScreen ? 100 : 10),
+                left: isLScreen ? 30 : 10, right: isLScreen ? 30 : 10),
             child: Image.asset(Assets.convert,
-                width: MediaQuery.of(context).size.width * 0.22),
+                width: MediaQuery.of(context).size.width * 0.2),
           )
         ],
       ),
