@@ -17,8 +17,7 @@ class AboutUs extends StatelessWidget {
           children: [
             const ab.AppBar(),
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 60, horizontal: 120),
+              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 60),
               child: ConstrainedBox(
                 constraints: BoxConstraints(
                   minHeight: MediaQuery.of(context).size.height,

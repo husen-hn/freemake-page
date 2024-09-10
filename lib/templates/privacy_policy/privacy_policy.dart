@@ -21,7 +21,7 @@ class PrivacyPolicy extends StatelessWidget {
               ),
               child: Container(
                   margin:
-                      const EdgeInsets.symmetric(vertical: 60, horizontal: 120),
+                      const EdgeInsets.symmetric(vertical: 30, horizontal: 60),
                   child: RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
