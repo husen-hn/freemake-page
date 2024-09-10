@@ -20,11 +20,12 @@ class HowWork extends StatelessWidget {
                   fontSize: 20)),
           const SizedBox(height: 40),
           ListView.separated(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: context.read<AppCubit>().getHowWorkData.length,
               separatorBuilder: (BuildContext context, int index) {
                 return const SizedBox(height: 20);
               },
-              shrinkWrap: true,
-              itemCount: context.read<AppCubit>().getHowWorkData.length,
               itemBuilder: (context, index) => HowWorkItem(
                   index: index,
                   icon: context.read<AppCubit>().getHowWorkData[index].icon,
