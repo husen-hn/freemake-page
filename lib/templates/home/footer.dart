@@ -54,7 +54,7 @@ class Footer extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.only(top: 30, bottom: 10),
-            child: Text(
+            child: SelectableText(
                 'Copyright © 2024, Freemake application All rights reserved.',
                 style: TextStyle(
                     fontFamily: 'Montserrat',

@@ -92,8 +92,8 @@ class AppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
-  RichText get _appBarTitle => RichText(
-        text: TextSpan(
+  SelectableText get _appBarTitle => SelectableText.rich(
+        TextSpan(
           text: 'Free',
           style: const TextStyle(
               fontFamily: 'Montserrat',

@@ -35,7 +35,7 @@ class HowWorkItem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  SelectableText(
                     title,
                     style: TextStyle(
                         fontFamily: 'Montserrat',
@@ -43,7 +43,7 @@ class HowWorkItem extends StatelessWidget {
                         fontSize: isLScreen ? 16 : 14,
                         color: Colors.grey[900]),
                   ),
-                  Text(
+                  SelectableText(
                     description,
                     style: TextStyle(
                         fontFamily: 'Montserrat',

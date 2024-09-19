@@ -28,18 +28,18 @@ class AboutUs extends StatelessWidget {
                         width: 100, semanticLabel: 'Freemake logo'),
                     const Padding(
                       padding: EdgeInsets.only(top: 30, bottom: 10),
-                      child: Text('Freemake',
+                      child: SelectableText('Freemake',
                           style: TextStyle(
                               fontSize: 24, fontWeight: FontWeight.bold)),
                     ),
                     const Padding(
                         padding: EdgeInsets.only(bottom: 30),
-                        child: Text('version 0.0.1 - beta',
+                        child: SelectableText('version 0.0.1 - beta',
                             style:
                                 TextStyle(fontSize: 14, color: Colors.grey))),
-                    RichText(
+                    SelectableText.rich(
                         textAlign: TextAlign.center,
-                        text: TextSpan(children: [
+                        TextSpan(children: [
                           const TextSpan(
                             text: 'Freemake is a product by ',
                             style: TextStyle(color: Colors.black),
@@ -61,13 +61,13 @@ class AboutUs extends StatelessWidget {
                         ])),
                     const Padding(
                       padding: EdgeInsets.only(top: 30, bottom: 10),
-                      child: Text('Customer Support',
+                      child: SelectableText('Customer Support',
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold)),
                     ),
-                    RichText(
+                    SelectableText.rich(
                         textAlign: TextAlign.center,
-                        text: TextSpan(children: [
+                        TextSpan(children: [
                           const TextSpan(
                             text: 'Email: ',
                             style: TextStyle(
@@ -87,9 +87,9 @@ class AboutUs extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    RichText(
+                    SelectableText.rich(
                         textAlign: TextAlign.center,
-                        text: TextSpan(children: [
+                        TextSpan(children: [
                           const TextSpan(
                             text: 'Website: ',
                             style: TextStyle(
@@ -108,13 +108,13 @@ class AboutUs extends StatelessWidget {
                         ])),
                     const Padding(
                       padding: EdgeInsets.only(top: 30, bottom: 10),
-                      child: Text('Third Party Library',
+                      child: SelectableText('Third Party Library',
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold)),
                     ),
-                    RichText(
+                    SelectableText.rich(
                         textAlign: TextAlign.center,
-                        text: TextSpan(
+                        TextSpan(
                             style: const TextStyle(
                                 color: Colors.black,
                                 fontStyle: FontStyle.italic),

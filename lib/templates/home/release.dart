@@ -38,7 +38,7 @@ class Release extends StatelessWidget {
                   _launchUrl(Uri.parse(
                       'https://github.com/husen-hn/freemake_page/releases'));
                 },
-                label: Text('Releases',
+                label: SelectableText('Releases',
                     style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold,
@@ -49,7 +49,7 @@ class Release extends StatelessWidget {
                   backgroundColor: Colors.white,
                 )),
             const SizedBox(height: 10),
-            Text('release notes and download all older versions',
+            SelectableText('release notes and download all older versions',
                 style: TextStyle(
                     color: Colors.grey[800],
                     fontSize: 12,
@@ -61,8 +61,8 @@ class Release extends StatelessWidget {
     );
   }
 
-  RichText get _appBarTitle => RichText(
-        text: TextSpan(
+  SelectableText get _appBarTitle => SelectableText.rich(
+        TextSpan(
           text: 'Free',
           style: const TextStyle(
               fontFamily: 'Montserrat',

@@ -23,10 +23,11 @@ class WhoIsItem extends StatelessWidget {
             width: isLScreen ? 100 : 70,
           ),
           const SizedBox(height: 30),
-          Text(
+          SelectableText(
             title,
             textAlign: TextAlign.center,
-            overflow: TextOverflow.ellipsis,
+            // overflow: TextOverflow.ellipsis,
+            scrollPhysics: const NeverScrollableScrollPhysics(),
             maxLines: 2,
             style: TextStyle(
                 fontFamily: 'Poppins',
@@ -35,10 +36,11 @@ class WhoIsItem extends StatelessWidget {
                 color: Colors.grey[900]),
           ),
           const SizedBox(height: 10),
-          Text(
+          SelectableText(
             description,
             textAlign: TextAlign.center,
-            overflow: TextOverflow.ellipsis,
+            // overflow: TextOverflow.ellipsis,
+            scrollPhysics: const NeverScrollableScrollPhysics(),
             maxLines: 5,
             style: TextStyle(
                 fontFamily: 'Montserrat',

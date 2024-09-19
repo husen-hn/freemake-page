@@ -20,9 +20,9 @@ class TemsOfUse extends StatelessWidget {
                 child: Container(
                   margin:
                       const EdgeInsets.symmetric(vertical: 30, horizontal: 60),
-                  child: RichText(
+                  child: SelectableText.rich(
                     textAlign: TextAlign.center,
-                    text: TextSpan(
+                    TextSpan(
                         style: TextStyle(
                             fontSize: 14,
                             fontFamily: 'Montserrat',
