@@ -56,7 +56,7 @@ class Header extends StatelessWidget {
                           InkWell(
                             onTap: () {
                               _launchUrl(Uri.parse(
-                                  'https://github.com/husen-hn/Freemake-page/releases/latest'));
+                                  'https://github.com/husen-hn/freemake-page/releases/latest'));
                             },
                             child: Image.asset(
                               Assets.directDL,
@@ -81,7 +81,7 @@ class Header extends StatelessWidget {
                           InkWell(
                             onTap: () {
                               _launchUrl(Uri.parse(
-                                  'https://github.com/husen-hn/Freemake-page/releases/latest'));
+                                  'https://github.com/husen-hn/freemake-page/releases/latest'));
                             },
                             child: Image.asset(
                               Assets.directDL,

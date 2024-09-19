@@ -36,7 +36,7 @@ class Release extends StatelessWidget {
             TextButton.icon(
                 onPressed: () {
                   _launchUrl(Uri.parse(
-                      'https://github.com/husen-hn/freemake_page/releases'));
+                      'https://github.com/husen-hn/freemake-page/releases'));
                 },
                 label: SelectableText('Releases',
                     style: TextStyle(
