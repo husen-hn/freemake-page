@@ -2,7 +2,7 @@ name: freemake_page
 description: Free Video Convertor page.
 
 maintainers: ["Hossein HassanNejad"]
-links: {"GitHub": "https://github.com/husen-hn/freemake_page"}
+links: {"GitHub": "https://github.com/husen-hn/freemake-page"}
 
 publish_to: 'none'
 version: 0.0.1
