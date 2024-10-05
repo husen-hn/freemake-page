@@ -38,7 +38,7 @@ class Release extends StatelessWidget {
                   _launchUrl(Uri.parse(
                       'https://github.com/husen-hn/freemake-page/releases'));
                 },
-                label: SelectableText('Releases',
+                label: Text('Releases',
                     style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold,
