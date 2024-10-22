@@ -67,7 +67,7 @@ class Header extends StatelessWidget {
                           InkWell(
                             onTap: () {
                               _launchUrl(Uri.parse(
-                                  'https://cafebazaar.ir/app/com.husen.freemake'));
+                                  'https://cafebazaar.ir/app/com.husen.freemake?l=en'));
                             },
                             child: Image.asset(
                               Assets.cafebazaarDL,
